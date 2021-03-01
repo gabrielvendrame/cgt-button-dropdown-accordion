@@ -1,0 +1,23 @@
+<div class="w-100" [style.text-align]="direction">
+  <button (click)="toggleAccordion()" #dropdownButton [ngClass]="{'active': !isHidden}" class="accordion-button"
+          [style.backgroundColor]="backgroundColor"
+          [style.color]="color"
+  >{{title}} <span>▼</span>
+  </button>
+  <div class="svg-content" [ngClass]="{'d-none': isHidden}">
+    <div class="svg-trapezoid" #svgContent [style.width]="buttonWidth">
+    </div>
+  </div>
+  <div [ngClass]="{'d-none': isHidden, 'd-grid': !isHidden}" [style.backgroundColor]="backgroundColor"
+       class="accordion-content">
+    <button class="content-button" *ngFor="let button of dropdownContent"
+            (click)="button.action()"
+            [style.backgroundColor]="button?.buttonColor"
+            [style.color]="button?.textColor">
+      <i-bs [name]="button?.icon" [style.color]="button?.iconColor"></i-bs>
+    </button>
+
+  </div>
+
+</div>
+
