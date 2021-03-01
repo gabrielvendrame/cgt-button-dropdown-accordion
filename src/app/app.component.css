@@ -1,84 +1,55 @@
 .d-none {
   display: none;
 }
-.active, .accordion-button:hover {
-  background-color: #ccc;
-}
 
 .accordion-button {
-  background-color: #eee;
-  color: #444;
+  background-color: white;
+  border: 3px solid white;
+  color: #021130;
+  border-radius: 40px;
   cursor: pointer;
   padding: 18px;
-  border: none;
-  text-align: left;
   outline: none;
   font-size: 15px;
-  transition: 2.8s;
 }
 
 .accordion-content {
-  padding: 0 18px;
   background-color: white;
   overflow: hidden;
-}
-.accordion-button:after {
-  content: "";
-  position:absolute;
-  margin:-20px;
-  border-radius: 50%; /* NEW */
-  box-shadow: 0 0 0 25px #522d5b;
+  padding: 2rem;
+  border-radius: 40px;
 }
 
-
-
-
-
-
-
-
-
-
-#box {
-  position: relative;
-  height: 20px;
-  background-color: blue;
-  border-radius: 10px 10px 0 0;
-  margin: 30px;
-  text-align: center;
-  color: #fff;
-  padding-top: 10px;
+.svg-trapezoid {
+  width: 143px;
+  align-self: center;
+  margin: 0 auto;
 }
 
-#left,
-#right {
+.svg-content {
+  width: 100%;
   position: absolute;
-  height: inherit;
-  width: 30px;
-  right: 0;
-  overflow: hidden;
-}
-
-#left {
-  left: -22px;
-}
-
-#right {
-  right: -22px;
-}
-
-#left::before,
-#right::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  height: 200%;
-  width: 200%;
-  border-radius: 100%;
-  box-shadow: 10px 10px 5px 100px blue;
+  top: 45px;
+  left: -1px;
   z-index: -1;
 }
 
-#left::before, #right::before {
-  top: -100%;
+.content-button {
+  background-color: #021130;
+  color: white;
+  border-radius: 4rem;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.content-button:nth-child(0) {
+  margin-left: 0;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  column-gap: 10px;
+  row-gap: 15px;
 }
