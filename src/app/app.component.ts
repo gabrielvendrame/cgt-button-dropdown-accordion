@@ -1,16 +1,17 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   isHidden = true;
   width: number;
   height: number;
   optionButtonWidth: number;
   optionButtonHeight: number;
+  buttons: DropdownContentButton[] = [];
 
   @ViewChild('rettangolo') rettangolo: ElementRef;
   @ViewChild('optionButton') optionButton: ElementRef;
@@ -35,6 +36,22 @@ export class AppComponent implements AfterViewInit {
     console.log(this.svgPathLeft);
 
     // this.svgPathRight = `M${this.optionButtonWidth - 18},0 C30,10 20,${this.height} ${this.width / 2},${this.height}`;
+  }
+
+  ngOnInit(): void {
+    this.buttons.push({
+      title: 'Ciao',
+      buttonColor: 'red',
+      textColor: 'white',
+      icon: 'alarm-fill',
+      action: (() => console.log(222))
+    }, {
+      title: 'Are',
+      buttonColor: 'blue',
+      textColor: 'red',
+      icon: 'align-middle',
+      action: (() => console.log(44))
+    });
   }
 
 
