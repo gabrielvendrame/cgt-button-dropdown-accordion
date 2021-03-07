@@ -1,14 +1,15 @@
-<button (click)="toggleAccordion()" [ngClass]="{'active': !isHidden}" class="accordion-button">Opzioni</button>
-<div [ngClass]="{'d-none': isHidden}" class="accordion-content">
+<button #optionButton (click)="toggleAccordion()" [ngClass]="{'active': !isHidden}" class="accordion-button">Opzioni</button>
+<div #rettangolo [style.height]="'3rem'" class="rettangolo">
+  <svg height="100%" width="100%" >
+    <path [attr.d]="svgPathLeft"/>
+<!--    <path [attr.d]="svgPathRight"/>-->
+  </svg>
+</div>
+<div [ngClass]="{'d-none': !isHidden}" class="accordion-content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat.</p>
 </div>
 
-<div id="box">
-  <div id="left"></div>
-  #box
-  <div id="right"></div>
-</div>
 
 
