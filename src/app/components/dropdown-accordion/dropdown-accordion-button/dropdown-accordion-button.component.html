@@ -5,7 +5,7 @@
             [style.backgroundColor]="backgroundColor"
             [style.color]="textColor"
             class="accordion-button">
-      {{optionButtonTitle}} <span>▼</span>
+      {{optionButtonTitle}} <span *ngIf="isHidden">▼</span><span *ngIf="!isHidden">▲</span>
     </button>
   </div>
   <div #curvedTrapezoid [style.height]="height" class="trapezoid-curved" *ngIf="!isHidden && hasTrapezoid">
