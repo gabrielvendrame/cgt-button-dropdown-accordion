@@ -1,0 +1,41 @@
+.accordion-content {
+  padding: 2rem;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.d-none {
+  display: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.content-button {
+  background-color: #021130;
+  color: white;
+  border-radius: 4rem;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-button:focus {
+  outline: none;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+.button-icon{
+  margin-left: .5rem;
+}

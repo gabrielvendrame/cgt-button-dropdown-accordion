@@ -1,0 +1,16 @@
+.trapezoid-curved{
+  margin-top: -16px;
+}
+
+.accordion-button {
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: center;
+  outline: none;
+  border-radius: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}

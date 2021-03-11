@@ -1,0 +1,16 @@
+<div class="w-100">
+  <div class="w-100 text-center">
+    <button #optionButton (click)="toggleAccordion()"
+            [ngClass]="{'active': !isHidden}"
+            [style.backgroundColor]="backgroundColor"
+            [style.color]="textColor"
+            class="accordion-button">
+      {{optionButtonTitle}} <span>▼</span>
+    </button>
+  </div>
+  <div #curvedTrapezoid [style.height]="height" class="trapezoid-curved" *ngIf="!isHidden && hasTrapezoid">
+    <svg height="100%" width="100%" [attr.fill]="backgroundColor">
+      <path [attr.d]="svgPath"/>
+    </svg>
+  </div>
+</div>
