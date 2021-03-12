@@ -13,6 +13,7 @@ export class DropdownAccordionButtonComponent implements OnInit, AfterViewInit {
   @Input() optionButtonTitle = 'Opzioni';
   @Input() direction: 'left' | 'right' | 'center' = 'center';
   @Input() height = '3rem';
+  @Input() width = 40;
   @Input() hasTrapezoid = true;
 
   @ViewChild('curvedTrapezoid') curvedTrapezoid: ElementRef;
@@ -50,12 +51,12 @@ export class DropdownAccordionButtonComponent implements OnInit, AfterViewInit {
     }
     const height = this.curvedTrapezoid.nativeElement.offsetHeight;
     const optionButtonWidth = this.dropdownButton.nativeElement.offsetWidth;
-    const optionButtonLeftPosition = this.dropdownButton.nativeElement.offsetLeft - 6;
+    const optionButtonLeftPosition = this.dropdownButton.nativeElement.offsetLeft - 7;
     const optionButtonRightPosition = this.dropdownButton.nativeElement.offsetLeft + optionButtonWidth - 9;
 
     this.svgPath = `M${optionButtonLeftPosition},0 C${optionButtonLeftPosition},${height / 6}
-     ${optionButtonLeftPosition},${height - height / 2} ${optionButtonLeftPosition - 40},${height} H${optionButtonRightPosition + 40}
-     C${optionButtonRightPosition}, ${height - height / 2} ${optionButtonRightPosition}, ${height / 6} ${optionButtonRightPosition},0`;
+     ${optionButtonLeftPosition},${height - height / 8} ${optionButtonLeftPosition - this.width},${height} H${optionButtonRightPosition + this.width}
+     C${optionButtonRightPosition}, ${height - height / 8} ${optionButtonRightPosition}, ${height / 6} ${optionButtonRightPosition},0`;
   }
 
   toggleAccordion(): void {
